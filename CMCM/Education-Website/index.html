@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <title>The Cold War</title>
+</head>
+
+<body>
+
+    <nav>
+        <div class="left">
+            <div class="logo">
+                <img src="assests/Screenshot 2024-05-30 214307.png">
+            </div>
+            <div class="links">
+                <a href="#">Home</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+
+        <div class="buttons">
+            <a href="contact.html"><i class='bx bx-support'></i></a>
+        </div>
+
+    </nav>
+
+    <header>
+        <div class="info">
+            <h1>The Cold War</h1>
+            <p>Rivalry for dominance.</p>
+        </div>
+       
+        
+    
+
+    <div class="content">
+        <div class="separator">
+           
+            <a href="#"> <i class='bx bx-chevron-right'></i></a>
+        </div>
+
+        <div class="courses">
+            <div class="item">
+                <div class="top">
+                    <img src="assests/Read.png">
+                    <div class="info">
+                        <a href="read.html">Read</a>
+                        <p>The Cold War was a prolonged period of
+                             geopolitical tension and rivalry that existed from the end of...</p>
+                        
+                        
+                    </div>
+                </div>
+               
+            </div>
+            <div class="item">
+                <div class="top">
+                    <img src="assests/quiz.jpg">
+                    <div class="info">
+                        <a href="quiz.html">Quiz</a>
+                        <p>Test your self and learn...</p>
+                        <p></p>
+                    
+                    </div>
+                </div>
+                
+            </div>
+            <div class="item">
+                <div class="top">
+                    <img src="assests/Movie.jpg">
+                    <div class="info">
+                        <a href="movie.html">Movie</a>
+                        <p>Watch a documentery about the cold war...</p>
+                       
+                        
+                    </div>
+                </div>
+               
+            </div>
+            <div class="item">
+                <div class="top">
+                    <img src="assests/game.jpg">
+                    <div class="info">
+                        <a href="https://cold-war2.com/en/index.php">Game</a>
+                        <p>Play A fun game...</p>
+                        
+                        
+                    </div>
+                </div>
+               
+            </div>
+           
+         
+                <div class="chatbot-container">
+                    <div class="chatbot-header">
+                        Ask about the Cold War
+                        <button class="chatbot-toggle" id="chatbot-toggle">-</button>
+                    </div>
+                    <div class="chatbot-body" id="chatbot-body">
+                        <div class="chatbot-messages" id="chatbot-messages"></div>
+                        <div class="chatbot-input-container">
+                            <input type="text" class="chatbot-input" id="chatbot-input" placeholder="Type a question...">
+                            <button class="chatbot-send" id="chatbot-send">Send</button>
+                        </div>
+                    </div>
+                </div>
+
+                <script>
+                    document.getElementById('chatbot-send').addEventListener('click', function() {
+                        sendMessage();
+                    });
+                    
+                    document.getElementById('chatbot-input').addEventListener('keypress', function(event) {
+                        if (event.key === 'Enter') {
+                            sendMessage();
+                        }
+                    });
+                    
+                    document.getElementById('chatbot-toggle').addEventListener('click', function() {
+                        const chatbotBody = document.getElementById('chatbot-body');
+                        const chatbotToggle = document.getElementById('chatbot-toggle');
+                        
+                        if (chatbotBody.style.display === 'none') {
+                            chatbotBody.style.display = 'flex';
+                            chatbotToggle.textContent = '-';
+                        } else {
+                            chatbotBody.style.display = 'none';
+                            chatbotToggle.textContent = '+';
+                        }
+                    });
+                    
+                    function sendMessage() {
+                        const input = document.getElementById('chatbot-input');
+                        const message = input.value.trim();
+                        if (message !== '') {
+                            const userMessage = document.createElement('div');
+                            userMessage.classList.add('chatbot-message', 'user');
+                            userMessage.textContent = message;
+                            document.getElementById('chatbot-messages').appendChild(userMessage);
+                    
+                            const botMessage = document.createElement('div');
+                            botMessage.classList.add('chatbot-message', 'bot');
+                            botMessage.textContent = getBotResponse(message);
+                            document.getElementById('chatbot-messages').appendChild(botMessage);
+                    
+                            input.value = '';
+                            document.getElementById('chatbot-messages').scrollTop = document.getElementById('chatbot-messages').scrollHeight;
+                        }
+                    }
+                    
+                    function getBotResponse(message) {
+                        // Basic Cold War responses
+                        const responses = {
+                            'what is the cold war': 'The Cold War was a period of geopolitical tension between the Soviet Union and the United States and their respective allies after World War II.',
+                            'when did the cold war start': 'The Cold War started in 1947, shortly after the end of World War II.',
+                            'when did the cold war end': 'The Cold War ended in 1991 with the dissolution of the Soviet Union.',
+                            'who were the main countries involved': 'The main countries involved were the United States and the Soviet Union, along with their respective allies.',
+                            'what was the arms race': 'The arms race was a competition between the US and the USSR to build the most powerful weapons, including nuclear bombs.',
+                            'what was the space race': 'The space race was a competition between the US and the USSR to achieve significant accomplishments in space exploration.',
+                            'what is the iron curtain': 'The Iron Curtain was a term used to describe the division between the Soviet-controlled countries and the Western countries during the Cold War.'
+                        };
+                    
+                        return responses[message.toLowerCase()] || 'I am not sure about that. Please ask another question about the Cold War.';
+                    }
+                    </script>
+                    
+                    
+                    
+
+</body>
+
+</html>

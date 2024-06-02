@@ -1,0 +1,176 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url("war.webp");
+    
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2em;
+    color: #333;
+}
+
+nav {
+    background-color: white;
+    padding: 10px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #666;
+    font-size: 1.1em;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #007BFF;
+}
+
+#introduction {
+    padding: 20px;
+    text-align: center;
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.timeline {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 40px auto;
+    padding: 20px;
+    max-width: 800px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: #ccc;
+    z-index: 1;
+}
+
+.event {
+    position: relative;
+    text-align: center;
+    cursor: pointer;
+}
+
+.event .bubble {
+    width: 50px;
+    height: 50px;
+    background-color: #007BFF;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    z-index: 2;
+    transition: transform 0.3s;
+}
+
+.event:hover .bubble {
+    transform: scale(1.2);
+}
+
+.event .label {
+    margin-top: 10px;
+    font-size: 0.9em;
+    color: #333;
+}
+
+main {
+    padding: 20px;
+}
+.back-button {
+    position: fixed;
+    left: 20px;
+    top: 20px;
+    background-color: #006aff; /* Button background color */
+    color: #ffffff; /* Button text color */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+    transition: background-color 0.3s ease; /* Adding a smooth transition */
+}
+
+.back-button:hover {
+    background-color: #0050a2; /* Darker shade on hover */
+}
+
+.content-section {
+    display: none;
+    background-color: #f7f6f6;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.content-section h2 {
+    font-size: 1.5em;
+    color: #333;
+    margin-top: 0;
+}
+
+.content-section p {
+    font-size: 1em;
+    color: #666;
+    line-height: 1.6;
+}
+
+@media (min-width: 768px) {
+    header {
+        padding: 50px 0;
+    }
+
+    nav ul li a {
+        font-size: 1.2em;
+    }
+
+    main {
+        padding: 40px;
+    }
+
+    .timeline {
+        padding: 40px;
+    }
+}

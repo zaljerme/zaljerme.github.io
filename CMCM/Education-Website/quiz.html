@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cold War Quiz - ZALEX Museum</title>
+    <link rel="stylesheet" href="quiz.css">
+</head>
+<body>
+    <button class="back-button" onclick="window.history.back()"> Back</button>
+    <div class="container">
+        <h1>Cold War Quiz</h1>
+        <form id="quiz-form">
+            <div class="question">
+                <h3>1. When did the Cold War officially start?</h3>
+                <ul class="options">
+                    <li><input type="radio" name="q1" value="A"> A. 1945</li>
+                    <li><input type="radio" name="q1" value="B"> B. 1947</li>
+                    <li><input type="radio" name="q1" value="C"> C. 1950</li>
+                    <li><input type="radio" name="q1" value="D"> D. 1961</li>
+                </ul>
+            </div>
+            <div class="question">
+                <h3>2. What was the primary ideological conflict during the Cold War?</h3>
+                <ul class="options">
+                    <li><input type="radio" name="q2" value="A"> A. Capitalism vs. Socialism</li>
+                    <li><input type="radio" name="q2" value="B"> B. Democracy vs. Fascism</li>
+                    <li><input type="radio" name="q2" value="C"> C. Communism vs. Capitalism</li>
+                    <li><input type="radio" name="q2" value="D"> D. Nationalism vs. Imperialism</li>
+                </ul>
+            </div>
+            <div class="question">
+                <h3>3. Which event is considered the closest the world came to nuclear war?</h3>
+                <ul class="options">
+                    <li><input type="radio" name="q3" value="A"> A. Berlin Blockade</li>
+                    <li><input type="radio" name="q3" value="B"> B. Korean War</li>
+                    <li><input type="radio" name="q3" value="C"> C. Cuban Missile Crisis</li>
+                    <li><input type="radio" name="q3" value="D"> D. Vietnam War</li>
+                </ul>
+            </div>
+            <div class="question">
+                <h3>4. Which wall is a symbol of the Cold War division?</h3>
+                <ul class="options">
+                    <li><input type="radio" name="q4" value="A"> A. Berlin Wall</li>
+                    <li><input type="radio" name="q4" value="B"> B. Great Wall of China</li>
+                    <li><input type="radio" name="q4" value="C"> Iron Curtain</li>
+                    <li><input type="radio" name="q4" value="D"> D. Maginot Line</li>
+                </ul>
+            </div>
+            <div class="question">
+                <h3>5. Who was the leader of the Soviet Union during the Cuban Missile Crisis?</h3>
+                <ul class="options">
+                    <li><input type="radio" name="q5" value="A"> A. Joseph Stalin</li>
+                    <li><input type="radio" name="q5" value="B"> B. Nikita Khrushchev</li>
+                    <li><input type="radio" name="q5" value="C"> C. Leonid Brezhnev</li>
+                    <li><input type="radio" name="q5" value="D"> D. Mikhail Gorbachev</li>
+                </ul>
+            </div>
+            <div class="question">
+                <h3>6. What was the purpose of the Marshall Plan?</h3>
+                <ul class="options">
+                    <li><input type="radio" name="q6" value="A"> A. To provide military aid to NATO allies</li>
+                    <li><input type="radio" name="q6" value="B"> B. To rebuild European economies after WWII</li>
+                    <li><input type="radio" name="q6" value="C"> C. To fund the Space Race</li>
+                    <li><input type="radio" name="q6" value="D"> D. To create the United Nations</li>
+                </ul>
+            </div>
+            <div class="question">
+                <h3>7. What was the name of the first artificial satellite launched into space by the Soviet Union?</h3>
+                <ul class="options">
+                    <li><input type="radio" name="q7" value="A"> A. Luna 1</li>
+                    <li><input type="radio" name="q7" value="B"> B. Sputnik 1</li>
+                    <li><input type="radio" name="q7" value="C"> C. Vostok 1</li>
+                    <li><input type="radio" name="q7" value="D"> D. Soyuz 1</li>
+                </ul>
+            </div>
+            <div class="question">
+                <h3>8. Which US President is credited with initiating the policy of détente with the Soviet Union?</h3>
+                <ul class="options">
+                    <li><input type="radio" name="q8" value="A"> A. John F. Kennedy</li>
+                    <li><input type="radio" name="q8" value="B"> B. Lyndon B. Johnson</li>
+                    <li><input type="radio" name="q8" value="C"> C. Richard Nixon</li>
+                    <li><input type="radio" name="q8" value="D"> D. Ronald Reagan</li>
+                </ul>
+            </div>
+            <div class="question">
+                <h3>9. What year did the Berlin Wall fall?</h3>
+                <ul class="options">
+                    <li><input type="radio" name="q9" value="A"> A. 1987</li>
+                    <li><input type="radio" name="q9" value="B"> B. 1989</li>
+                    <li><input type="radio" name="q9" value="C"> 1991</li>
+                    <li><input type="radio" name="q9" value="D"> 1993</li>
+                </ul>
+            </div>
+            <div class="question">
+                <h3>10. Which policy did Mikhail Gorbachev introduce that led to greater openness in the Soviet Union?</h3>
+                <ul class="options">
+                    <li><input type="radio" name="q10" value="A"> A. Glasnost</li>
+                    <li><input type="radio" name="q10" value="B"> B. Perestroika</li>
+                    <li><input type="radio" name="q10" value="C"> C. Ostpolitik</li>
+                    <li><input type="radio" name="q10" value="D"> D. Solidarity</li>
+                </ul>
+            </div>
+            <div id="score"></div>
+            <div id="back-button"></div>
+            <button type="button" onclick="calculateScore()">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        function calculateScore() {
+            var correctAnswers = ['B', 'C', 'C', 'A', 'B', 'B', 'B', 'C', 'B', 'A'];
+            var score = 0;
+            for (var i = 1; i <= 10; i++) {
+                var question = document.getElementsByName('q' + i);
+                for (var j = 0; j < question.length; j++) {
+                    if (question[j].checked && question[j].value === correctAnswers[i - 1]) {
+                        score++;
+                    }
+                }
+            }
+            document.getElementById('score').innerHTML = `<h2>You scored ${score} out of 10</h2>`;
+            document.getElementById('back-button').innerHTML = `<button onclick="location.href='index.html'">Back</button>`;
+        }
+    </script>
+</body>
+</html>
